@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Pronunciations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .word-container {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Click the Buttons to Hear the Pronunciations</h1>
+    
+    <!-- Container for the words and buttons -->
+    <div class="word-container">
+        <p>Hola 1: <button class="playButton" data-audio="hola.m4a">Play</button></p>
+    </div>
+    <div class="word-container">
+        <p>Word 2: <button class="playButton" data-audio="buenos dias.m4a">Play</button></p>
+    </div>
+    <div class="word-container">
+        <p>Word 3: <button class="playButton" data-audio="path/to/pronunciation3.mp3">Play</button></p>
+    </div>
+    <div class="word-container">
+        <p>Word 4: <button class="playButton" data-audio="path/to/pronunciation4.mp3">Play</button></p>
+    </div>
+    <div class="word-container">
+        <p>Word 5: <button class="playButton" data-audio="path/to/pronunciation5.mp3">Play</button></p>
+    </div>
+    <div class="word-container">
+        <p>Word 6: <button class="playButton" data-audio="path/to/pronunciation6.mp3">Play</button></p>
+    </div>
+    <div class="word-container">
+        <p>Word 7: <button class="playButton" data-audio="path/to/pronunciation7.mp3">Play</button></p>
+    </div>
+    <div class="word-container">
+        <p>Word 8: <button class="playButton" data-audio="path/to/pronunciation8.mp3">Play</button></p>
+    </div>
+    <div class="word-container">
+        <p>Word 9: <button class="playButton" data-audio="path/to/pronunciation9.mp3">Play</button></p>
+    </div>
+    <div class="word-container">
+        <p>Word 10: <button class="playButton" data-audio="path/to/pronunciation10.mp3">Play</button></p>
+    </div>
+
+
+    <div class="word-container">
+      <p>Word 11: <button class="playButton" data-audio="hola.m4a">Play</button></p>
+  </div>
+
+    <script>
+        // JavaScript to play the audio when any button is clicked
+        document.querySelectorAll('.playButton').forEach(button => {
+            button.addEventListener('click', function() {
+                var audioSrc = this.getAttribute('data-audio');
+                var audio = new Audio(audioSrc);
+                audio.play();
+            });
+        });
+    </script>
+</body>
+</html>
